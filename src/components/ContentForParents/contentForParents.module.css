@@ -1,0 +1,23 @@
+.wrap {
+    color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+    /*background-image: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg');*/
+    /*background-size: contain;*/
+    /*background-repeat: round;*/
+
+}
+
+.container {
+    /*font-size: 24px;*/
+    font-weight: 300;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(1.425rem + 2.1vw) !important;
+    /*background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg')*/
+}
