@@ -4,20 +4,72 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    /*background-color: #fdbb2e;*/
-    background-image: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg');
-    background-size: contain;
-    background-repeat: round;
+    background: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg') 0 0/100% 100% no-repeat fixed;
+}
 
+@media (max-width: 460px) {
+    .wrap {
+        background: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg') 0 0/auto 100% no-repeat;
+    }
 }
 
 .container {
-    /*font-size: 24px;*/
     font-weight: 300;
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: calc(1.425rem + 2.1vw) !important;
-    /*background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg')*/
+}
+
+.greeting {
+    max-width: 650px;
+    white-space: nowrap;
+}
+
+.typewriter {
+    white-space: pre-wrap;
+}
+
+.wrapAvatar {
+    padding: 1rem;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 50%;
+    animation-name: wrapAvatar;
+    animation-duration: 2s;
+}
+
+.avatar {
+    border-radius: 50%;
+    /*animation: zoomIn;*/
+    /*animation-duration: 5s;*/
+    width: 300px;
+    height: 300px;
+    background: url('../Assets/avatar.png') 0 0/cover no-repeat;
+}
+
+@keyframes wrapAvatar {
+    0% {
+        transform: scale(0, 0);
+    }
+    50% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .greeting {
+        text-align: center;
+    }
 }

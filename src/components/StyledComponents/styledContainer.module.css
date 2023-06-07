@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     /*background-image: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg');*/
     /*background-size: contain;*/
     /*background-repeat: round;*/
@@ -29,7 +29,7 @@
     align-items: center;
     /*font-size: calc(1.425rem + 2.1vw) !important;*/
     /*background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg')*/
-    padding: 32px;
+    padding: 48px 32px 32px 32px;
 }
 
 .display {
@@ -39,7 +39,7 @@
 
 .generalTitle {
     padding: 0px 4px;
-    background-color: #ffd4c1;
+    /*background-color: #ffd4c1;*/
 }
 
 .detailTitle {
