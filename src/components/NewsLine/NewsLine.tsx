@@ -80,23 +80,20 @@ export const data: IData[] = [
             images: [
                 {
                     id: v4(),
-                    imageUrl: 'https://downloader.disk.yandex.ru/preview/dcbba2149c0e944e5d631e68a8753acdb89c8e6821b153299f272cfd3d2900ae/648076a4/9asrvxLCb7hD8cyJ8A5pAUjhvHT3kAb9SS0oVUT0hJx9iRvW26HWRzgLmCRMvxi1OTY8ddjImGSlshtbPN2kpg%3D%3D?uid=0&filename=%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2023-06-01_17-39-08-204.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048'
+                    imageUrl: 'https://downloader.disk.yandex.ru/preview/1308d3d8e709e239f9cef3079c5c88e6b22406cc48c44a74d59781573b4053dc/6480fa7e/9asrvxLCb7hD8cyJ8A5pAUjhvHT3kAb9SS0oVUT0hJx9iRvW26HWRzgLmCRMvxi1OTY8ddjImGSlshtbPN2kpg%3D%3D?uid=0&filename=%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2023-06-01_17-39-08-204.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048'
                 },{
                     id: v4(),
-                    imageUrl: 'https://disk.yandex.ru/i/Ez6rQcM88C47fQ'
+                    imageUrl: 'https://downloader.disk.yandex.ru/preview/dad675ac1901fb8fb7814e69d51708313249a173b387bbe4f9f5c2666e8495a8/6480faa6/loAh2L_1uxh-ge-t6rxsM5D2l5mhOdz61JeBe7AmHMU757TTC0zty4fJkhQYjMCETmzgA02IOWoGin1IjXdMaw%3D%3D?uid=0&filename=%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2023-06-01_17-39-08-377.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048'
                 },{
                     id: v4(),
-                    imageUrl: 'https://disk.yandex.ru/i/Y2vWe5NnFqOEPA'
+                    imageUrl: 'https://downloader.disk.yandex.ru/preview/461eb4ebc267c85a10155411aa469ccf79de5c3a1504b639c7fb4359bed44407/6480fb17/SYRKy-8ucdYwX8QUEYRsR0jhvHT3kAb9SS0oVUT0hJwwl3w1iTiZdmQkKKZBk8GDYZkTByU4aoaroDp_wO5dZg%3D%3D?uid=0&filename=%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2023-06-01_17-39-08-492.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048'
                 },{
                     id: v4(),
-                    imageUrl: 'https://disk.yandex.ru/i/3Xmc5Z05P4sPLw'
+                    imageUrl: 'https://downloader.disk.yandex.ru/preview/a9dbd1dff4458d64a5ada17f960fe77e1232cef2208f34a1bf5a2f1eb3c21bfa/6480fb95/rQOoz3R_JoGCylLs7R8SsEjhvHT3kAb9SS0oVUT0hJwyAfnSuLreLmniA0oforDLG5coBo13sPQ3G2k64ei54w%3D%3D?uid=0&filename=%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2023-06-01_17-39-08-876.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048'
                 },{
                     id: v4(),
-                    imageUrl: 'https://disk.yandex.ru/i/uYYPRhxXaNPSXQ'
-                },{
-                    id: v4(),
-                    imageUrl: 'https://disk.yandex.ru/i/gsDGM0S82GdEZg'
-                },
+                    imageUrl: 'https://downloader.disk.yandex.ru/preview/7515074c162803f6f1fda39b4e08dbb4ec80ed29951bbe8ebb8d9fbde4ee1f84/6480fb4b/ltebrBpC1Rdk51OukcYiw0jhvHT3kAb9SS0oVUT0hJxWiZl_ABQFkmNSMxWgO4gfMIGIYfqdPZ3bYDTVzvwmlQ%3D%3D?uid=0&filename=%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_viber_2023-06-01_17-39-08-631.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048'
+                }
             ]
         }
     },

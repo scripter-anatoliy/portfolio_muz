@@ -11,7 +11,8 @@ function Main() {
         <div id="part-1" className={main.wrap}>
             <div className={main.container}>
                 <div className={main.greeting}>
-                    <div>Приветсвую! Я Татьяна!</div>
+                    <div>Приветствую, я - Татьяна,</div>
+                    <div>музыкальный руководитель!</div>
                     <div className={main.typewriter}><Type/></div>
                 </div>
                 <div className={main.wrapAvatar}>

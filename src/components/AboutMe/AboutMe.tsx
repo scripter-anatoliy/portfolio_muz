@@ -27,12 +27,12 @@ const personalData: PersonalDataType[] = [
     {
         id: v4(),
         title: 'Дата Рождения:',
-        description: '23 Апреля, 1987'
+        description: '23 Апреля, 1989'
     },
     {
         id: v4(),
         title: 'Адрес:',
-        description: 'Самара, Российская федерация'
+        description: 'Самара, Российская Федерация'
     }
 ]
 
@@ -72,18 +72,18 @@ export const AboutMe = () => {
             <div id="part-2" style={{display: "flex"}} data-aos="fade-in">
                 <div>
                     <div className={`${aboutMe.wrapWelcome} ${aboutMe.display}`}>
-                        <span data-aos="fade-in" className={aboutMe.welcome}>Приветствую, я</span>
-                        <span data-aos="fade-in" className={`${aboutMe.welcomeFio} ${aboutMe.display}`}> Селиванова Татьяна</span>
+                        {/*<span data-aos="fade-in" className={aboutMe.welcome}>Приветствую, я</span>*/}
+                        <span data-aos="fade-in" className={`${aboutMe.welcomeFio} ${aboutMe.display}`}>Селиванова Татьяна Сергеевна</span>
                     </div>
                     <div className={aboutMe.wrapText}>
-                                <span data-aos="fade-in">Работаю музыкальным руководителем в МБОУ "Школа №176" (дошкольные группы) со всеми
+                                <span data-aos="fade-in">Работаю музыкальным руководителем в МБОУ "Школа №176" г.о. Самара (дошкольные группы) со всеми
                                 возрастными группами.
                                 </span>
                         <span data-aos="fade-in"><b>Музыкальный руководитель - это не просто профессия</b>,
                                     это состояние души, возможность
                                 постоянно находиться в мире детства, в мире сказки и фантазии.
                                 </span>
-                        <span data-aos="fade-in">ОБРАЗОВАНИЕ</span>
+                        <span style={{textDecoration: "underline"}} data-aos="fade-in">Образование:</span>
                         <span data-aos="fade-in">2004-2008гг. Самарский социально-педагогический колледж, Музыкальное отделение.
                                 Квалификация - учитель музыки, музыкальный руководитель в детском саду.</span>
                         <span data-aos="fade-in">2008-2012гг. Московский городской педагогический университет (Самарский филиал).

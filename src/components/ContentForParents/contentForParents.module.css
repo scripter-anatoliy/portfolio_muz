@@ -1,9 +1,10 @@
 .wrap {
     color: black;
-    height: 100vh;
+    /*height: 100vh;*/
     width: 100%;
     display: flex;
     justify-content: center;
+    background: rgb(248,249,250);
     /*background-color: cadetblue;*/
     /*background-image: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg');*/
     /*background-size: contain;*/
@@ -17,7 +18,65 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-top: 72px;
+    padding-bottom: 32px;
     font-size: calc(1.425rem + 2.1vw) !important;
     /*background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg')*/
+}
+
+.wrapInfo {
+    display: flex;
+justify-content: space-between;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    background-color: #ffd4c1;
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: center;
+    width: 125px;
+}
+.description {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-top: 12px;
+    margin-bottom: 42px;
+}
+
+.list {
+    color: rgba(0,0,0,0.4);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 3.2;
+}
+
+.listItem {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.list a {
+    color: inherit;
+    text-decoration: unset;
+}
+
+.picture {
+    max-height: 500px;
+    max-width: 700px;
+    align-self: center;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 2px 1px 3px #777;
+    -moz-box-shadow: 2px 1px 3px #777;
+    -webkit-box-shadow: 2px 1px 3px #777;
 }

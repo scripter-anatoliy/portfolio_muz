@@ -15,7 +15,7 @@ export const ModalCustom: React.FC<IModalCustom> = ({modal, handleOk, handleCanc
 
 
     return (
-        <Modal style={{textAlign: 'center', maxHeight: '100vh', width: '90%'}} footer={null} centered
+        <Modal style={{textAlign: 'center'}} footer={null} centered
                title="Basic Modal" open={isModalOpen}
                width="90%"
 
@@ -23,10 +23,10 @@ export const ModalCustom: React.FC<IModalCustom> = ({modal, handleOk, handleCanc
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <div style={{width: '75%'}}>
                     <Carousel autoplay dots={false} effect={'fade'} autoplaySpeed={5000}
-                              pauseOnHover={false} speed={2000}>
+                              pauseOnHover={false} speed={2000} arrows>
                         {modal.images.map((image) =>
                             <div id={image.id} className={classes.wrapImg}>
-                                <img alt='1' className={classes.img}
+                                <img alt='picture' className={classes.img}
                                      src={image.imageUrl}/>
                             </div>
                         )}
