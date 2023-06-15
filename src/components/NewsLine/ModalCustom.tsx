@@ -1,14 +1,14 @@
-import React, {useState} from "react";
+import React from "react";
 import './newsLine.module.css';
 import classes from './newsLine.module.css';
 import {Carousel, Modal} from 'antd';
-import {IModal} from "./NewsLine";
+import {IData, IImages} from "./NewsLine";
 
 interface IModalCustom {
-    modal: IModal
-    handleOk: () => void
+    modal: IData | null
+    handleOk: (id: string) => void
     handleCancel: () => void
-    isModalOpen:boolean
+    isModalOpen: boolean
 }
 
 export const ModalCustom: React.FC<IModalCustom> = ({modal, handleOk, handleCancel, isModalOpen}) => {
@@ -16,26 +16,26 @@ export const ModalCustom: React.FC<IModalCustom> = ({modal, handleOk, handleCanc
 
     return (
         <Modal style={{textAlign: 'center'}} footer={null} centered
-               title="Basic Modal" open={isModalOpen}
+               title={modal?.title} open={isModalOpen}
                width="90%"
 
-               onOk={handleOk} onCancel={handleCancel}>
+               onOk={() => handleOk(String(modal?.id))} onCancel={handleCancel}>
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div style={{width: '75%'}}>
+                <div style={{width: '65%'}}>
                     <Carousel autoplay dots={false} effect={'fade'} autoplaySpeed={5000}
                               pauseOnHover={false} speed={2000} arrows>
-                        {modal.images.map((image) =>
-                            <div id={image.id} className={classes.wrapImg}>
+                        {modal?.images.map((image: IImages) =>
+                            <div key={image.id} className={classes.wrapImg}>
                                 <img alt='picture' className={classes.img}
                                      src={image.imageUrl}/>
                             </div>
                         )}
                     </Carousel>
                 </div>
-                <div style={{width: '35%'}}>
-                    <div>{modal.description.title}</div>
-                    <div>{modal.description.description}</div>
-                    <div>{modal.description.date}</div>
+                <div className={classes.description}>
+                    {/*<div>{modal?.description.title}</div>*/}
+                    <div>{modal?.description.description}</div>
+                    <div className={classes.descriptionDate}>{modal?.description.date}</div>
                 </div>
             </div>
         </Modal>

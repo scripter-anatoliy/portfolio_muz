@@ -22,7 +22,6 @@ function ContentForParents() {
                                 </div>
                             )}
                         </div>
-
                     </div>
                     <div className={classes.picture}><img src={image} alt="image"/></div>
                 </div>
