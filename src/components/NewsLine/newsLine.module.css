@@ -21,15 +21,30 @@
     display: grid;
     /*grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));*/
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    gap: 48px;
     height: auto;
     width: 100%;
     /*color: `${store.appStore.theme.textPrimary} `*/
 }
 
+@media (max-width: 460px) {
+    .wrapGrid {
+        grid-template-columns: 1fr
+    }
+    .description {
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 460px) {
+    .wrapGrid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
 .item {
     /*width: 350px;*/
-    height: 300px;
+    /*height: 300px;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,10 +52,56 @@
 }
 
 .wrapCard {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     /*background-size: contain;*/
-    height: 35vh;
+    /*height: 35vh;*/
     /*background: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg') 0 0/100% 100% no-repeat fixed;*/
 
+}
+
+.wrapModalArchive {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /*overflow-x: auto;*/
+    max-height: 500px;
+
+    overflow-x:  scroll;
+    overscroll-behavior: contain;
+}
+
+.wrapModalArchive::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.wrapModalArchive::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 20px;
+}
+
+.wrapCardArchive {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
 }
 
 .wrapCardImage {
@@ -49,45 +110,49 @@
     height: 100%;
     position: absolute;
     transition: all 1s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .wrapCardImage:hover {
     opacity: 0.1;
-
+    position: absolute;
 }
 
-.imageBlockHover {
+.imageBlock {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     opacity: 1;
-    width: 100%;
-    height: 100%;
+    /*width: 100%;*/
+    /*height: 100%;*/
     color: #ffffff;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 56.25%;
+}
+
+.imageBlockHover {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
 }
 
 /*.imageBlockHover:hover {*/
 /*    opacity: 1;*/
 /*    background-color: rgba(0, 0, 0, 0.5);*/
 /*}*/
-
-.wrapImg {
-    /*position: relative;*/
-    /*max-width: 500px;*/
-    /*max-height: 700px;*/
-    /*height: 100%;*/
-    /*background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5) );*/
-    /*z-index: 3;*/
-    /*background-repeat: no-repeat;*/
-    /*max-width: 600px;*/
-    /*max-height: 350px;*/
-    width: 700px;
-    height: 700px;
-    /*border: 5px solid #515151;*/
-}
 
 /*.img {*/
 /*    !*background: rgba(0,0,0,.5);*!*/
@@ -102,18 +167,45 @@
 /*    !*z-index: 2;*!*/
 /*}*/
 
-.img {
-    height: 100%;
-    width: 100%;
-}
-
 .description {
     text-align: justify;
     font-size: 18px;
     line-height: 1.8;
 }
 
+.descriptionArchive {
+    color: #cccccc
+}
+
 .descriptionDate {
     margin-top: 16px;
     font-weight: 600;
+}
+
+.wrapContainerImg {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+
+}
+
+.wrapImg {
+    width: 100%;
+    background: white;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
 }

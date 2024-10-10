@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     background: url('https://kartinkin.net/pics/uploads/posts/2022-08/1660628383_1-kartinkin-net-p-fon-muzikalnii-nezhnii-krasivo-1.jpg') 0 0/100% 100% no-repeat fixed;
+    user-select: none;
 }
 
 @media (max-width: 460px) {
@@ -22,13 +23,14 @@
     font-size: calc(1.425rem + 2.1vw) !important;
 }
 
+
 .greeting {
     max-width: 650px;
     white-space: nowrap;
 }
 
 .typewriter {
-    white-space: pre-wrap;
+    font-size: 6rem;
     color: cornflowerblue;
 }
 
@@ -51,6 +53,49 @@
     background: url('../Assets/avatar.png') 0 0/cover no-repeat;
 }
 
+.buttonsGroup {
+    display: flex;
+    gap: 100px;
+    margin-top: 24px;
+}
+
+.button {
+    /*width: 100%;*/
+    background-color: #1c1f23;
+    /*color: #212529;*/
+    height: 50px !important;
+    font-size: 1.3rem !important;
+    width: 300px;
+}
+
+.button:hover {
+    background-color: #8e9a9d !important;
+}
+
+.wrapButtonLink {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.7s ease;
+    height: 50px !important;
+    font-size: 1.3rem !important;
+    color: #1c1f23 !important;
+}
+
+.wrapButtonLink:hover {
+    fill: #8e9a9d;
+    color: #8e9a9d !important;
+}
+
+.wrapButtonLink a {
+    transition: all 0.7s ease;
+}
+
+.wrapButtonLink svg {
+    transition: all 0.7s ease;
+}
+
 @keyframes wrapAvatar {
     0% {
         transform: scale(0, 0);
@@ -63,14 +108,26 @@
     }
 }
 
-
-
 @media (max-width: 991px) {
     .container {
         flex-direction: column-reverse;
         justify-content: center;
+        font-size: calc(1.125rem + 2.1vw) !important;
     }
+
     .greeting {
         text-align: center;
+    }
+
+    .typewriter {
+        font-size: 3rem;
+    }
+    .buttonsGroup {
+        align-items: center;
+        flex-direction: column;
+        gap: unset;
+    }
+    .wrapButtonLink {
+        justify-content: center;
     }
 }

@@ -1,0 +1,223 @@
+
+.wrap {
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #ffd4c1;
+}
+
+.containerBlock {
+    font-weight: 300;
+    width: 100%;
+    gap: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 72px;
+    padding-bottom: 32px;
+    font-size: calc(1.425rem + 2.1vw) !important;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapContent {
+    flex: 1 1 50%;
+
+}
+
+.wrapContent h3 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.wrapInput div {
+    display: unset;
+    font-size: 1rem !important;
+    font-weight: 500;
+}
+
+.wrapInput div label {
+    font-size: 1rem !important;
+}
+
+.wrapInput div span {
+    background-color: #ffd4c1 !important;
+}
+
+.input {
+    content: "";
+    padding: 0;
+    background-color: #ffd4c1 !important;
+    border-style: none;
+    border-radius: unset;
+    border-bottom: 2px solid #ccc;
+    border-inline-end-width: unset;
+    box-shadow: unset !important;
+    font-size: 1rem;
+    /*border-color: unset;*/
+}
+
+.input span:before textarea {
+    content: "";
+    background-color: #ffd4c1;
+}
+
+textarea:before {
+    background-color: #ffd4c1;
+}
+
+textarea {
+    font-size: 1rem;
+}
+
+.button div div {
+    margin-inline-start: unset
+}
+
+.comment {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007aff;
+    font-size: 1.5rem;
+}
+
+.text {
+    font-size: 1.3rem;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.linksWrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.link {
+    border-radius: 50%;
+    border: 1px solid #212529;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.linkVK:hover {
+    border: 1px solid rgb(0, 119, 255);
+    transition: all 0.2s ease;
+    /*transform: scale(1.1);*/
+    background-color: rgb(0, 119, 255);
+}
+
+.linkVK svg:hover {
+    fill: #ffffff;
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+}
+
+.linkTelegram:hover {
+    border: 1px solid #2481cc;
+    transition: all 0.2s ease;
+    /*transform: scale(1.1);*/
+    background-color: #2481cc;
+}
+
+.linkTelegram svg:hover {
+    fill: #ffffff;
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+}
+
+.linkYouTube:hover {
+    border: 1px solid rgb(255, 0, 0);
+    transition: all 0.2s ease;
+    /*transform: scale(1.1);*/
+    /*background-color: #2481cc;*/
+}
+
+.linkYouTube svg:hover {
+    fill: rgb(255, 0, 0);
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+}
+
+.wrapCardArchive {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wrapAvatar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 20%;
+}
+
+.userName {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Courie';
+}
+
+.commentBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    gap: 24px;
+    height: 150px;
+    max-height: 200px;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: 'Lora';
+}
+
+.commentUser {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-end;
+    order: 0;
+    text-align: justify;
+    font-size: 16px;
+    gap: 12px;
+    width: 100%;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.commentText {
+padding-top: 24px;
+}
+
+.commentDate {
+    text-align: end;
+    font-weight: 500;
+}
+
+
+@media (max-width: 460px) {
+    .containerBlock {
+        justify-content: unset;
+        flex-direction: column;
+        gap: 20px
+    }
+
+}
+

@@ -1,55 +1,109 @@
+import { Menu } from "antd";
 import React from "react";
-import classes from './burgerMenu.module.css';
-import {Anchor, Popover} from 'antd';
-import Link from "antd/es/typography/Link";
+import { Link } from "react-scroll";
+import { v4 } from "uuid";
+import classes from "./burgerMenu.module.css";
 
-export const BurgerMenu = () => {
-
-    // const scrollToTarget = (link: string) => {
-    //     console.log('Anchor:OnChange', link);
-    //     if(link === '#part-5') {
-    //         console.log('попали', link);
-    //         const targetElement = document.getElementById("part-5");
-    //
-    //         if (targetElement) {
-    //             console.log(targetElement.scrollIntoView, link);
-    //             targetElement.scrollIntoView({behavior: 'smooth'});
-    //         }
-    //     }
-    // };
-
-    return (
-        <div className={classes.wrap}>
-                    <Anchor
-                        // onChange={scrollToTarget}
-                        items={[
-                            {
-                                key: 'part-1',
-                                href: '#part-1',
-                                title: 'Главная',
-                            },
-                            {
-                                key: 'part-2',
-                                href: '#part-2',
-                                title: 'Обо мне',
-                            },
-                            {
-                                key: 'part-3',
-                                href: '#part-3',
-                                title: 'Новстная лента',
-                            },
-                            {
-                                key: 'part-4',
-                                href: '#part-4',
-                                title: 'Для родителей',
-                            },
-                            {
-                                key: 'part-5',
-                                href: '#part-5',
-                                title: 'Творческая копилка',
-                            },
-                        ]}
-                    />
-        </div>
-    )
+interface BurgerMenuProps {
+  setShow: (value: boolean) => void;
+  show: boolean;
 }
+
+export const BurgerMenu: React.FC<BurgerMenuProps> = ({ setShow, show }) => {
+  // const scrollToTarget = (link: string) => {
+  //     console.log('Anchor:OnChange', link);
+  //     if (link === '#part-5') {
+  //         console.log('попали', link);
+  //         const targetElement = document.getElementById("part-5");
+  //
+  //         if (targetElement) {
+  //             console.log(targetElement.scrollIntoView, link);
+  //             targetElement.scrollIntoView({behavior: 'smooth'});
+  //         }
+  //     }
+  // };
+
+  const handleMenuClick = () => {
+    setShow(false);
+    // Дополнительная логика при нажатии на пункт меню
+    // Можно добавить скролл к нужному элементу на странице
+  };
+
+  return (
+    <div className={classes.wrap}>
+      <Menu
+        mode="vertical"
+        theme="light"
+        style={{ display: show ? "block" : "none" }}
+        onSelect={handleMenuClick}
+      >
+        {menuItem.map((item) => (
+          <Menu.Item key={item.id}>
+            <Link
+              to={item.link}
+              smooth={true}
+              duration={2000}
+              offset={-40}
+              spy
+              href={item.href}
+            >
+              {item.name}
+            </Link>
+          </Menu.Item>
+        ))}
+      </Menu>
+    </div>
+  );
+};
+
+interface IMenu {
+  id: string;
+  link: string;
+  name: string;
+  href: string;
+}
+
+const menuItem: IMenu[] = [
+  {
+    id: v4(),
+    link: "part-1",
+    name: "Главная",
+    href: "#main",
+  },
+  {
+    id: v4(),
+    link: "part-2",
+    name: "Обо мне",
+    href: "#aboutMe",
+  },
+  {
+    id: v4(),
+    link: "part-3",
+    name: "Новостная лента",
+    href: "#newsLine",
+  },
+  {
+    id: v4(),
+    link: "part-4",
+    name: "Для родителей",
+    href: "#contentForParent",
+  },
+  {
+    id: v4(),
+    link: "part-5",
+    name: "Творческая копилка",
+    href: "#developingEnvironment",
+  },
+  {
+    id: v4(),
+    link: "part-6",
+    name: "Публикации",
+    href: "#publications",
+  },
+  {
+    id: v4(),
+    link: "part-7",
+    name: "Контакты",
+    href: "#contact",
+  },
+];

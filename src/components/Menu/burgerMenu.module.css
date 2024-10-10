@@ -2,5 +2,7 @@
     position: fixed;
     top: 45px;
     right: 100px;
-    background-color: cadetblue;
+    background-color: #c8dcdc;
+    border-radius: 10px;
+    width: 180px;
 }

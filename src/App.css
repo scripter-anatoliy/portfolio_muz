@@ -1,12 +1,8 @@
 .body {
-    //color: red;
-    //background-color: black;
-    //height: 100vh;
-    display: flex;
-    flex-direction: column;
-    //gap: 40px;
+  /* //color: red;
+  //background-color: black;
+  //height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  /* //gap: 40px; */
 }
-
-
-
-

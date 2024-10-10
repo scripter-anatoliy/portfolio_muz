@@ -1,0 +1,33 @@
+
+.footer {
+    height: 150px;
+    background-color: #212529;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+justify-content: space-around;
+    user-select: none;
+}
+
+.footerText {
+    width: 80%;
+    white-space: pre-wrap;
+    letter-spacing: 1px;
+}
+
+.nameText {
+    padding: 0 4px;
+    color: #ffd4c1;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media (max-width: 778px) {
+    .footer {
+        justify-content: center;
+    }
+    .footerText {
+        text-align: center;
+    }
+}

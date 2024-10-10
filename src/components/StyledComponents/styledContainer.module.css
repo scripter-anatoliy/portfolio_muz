@@ -29,8 +29,10 @@
     align-items: center;
     /*font-size: calc(1.425rem + 2.1vw) !important;*/
     /*background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg')*/
-    padding: 48px 32px 32px 32px;
+    padding: 48px 0px 32px 0px;
 }
+
+
 
 .display {
     display: flex;
@@ -39,14 +41,16 @@
 
 .generalTitle {
     padding: 0px 4px;
-    /*background-color: #ffd4c1;*/
+    background-color: #ffd4c1;
+    line-height: 1.8;
 }
 
 .detailTitle {
-    font-size: 32px;
+    font-weight: 600;
+    font-size: 2.5rem;
     margin-top: 6px;
     margin-bottom: 2rem;
-    font-weight: bold;
+    line-height: 1.2;
 }
 
 .wrapWelcome {
@@ -181,4 +185,14 @@
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5));
     /*background: rgba(0,0,0,.5);*/
     z-index: 2;
+}
+
+@media (max-width: 460px) {
+    .container {
+        width: 90%;
+    }
+    .detailTitle {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
