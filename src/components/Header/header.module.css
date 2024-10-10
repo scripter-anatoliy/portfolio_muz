@@ -5,13 +5,19 @@
     width: 100%;
     transition: all 1s ease;
     display: flex;
-    height: 40px;
+    /*height: 40px;*/
     justify-content: center;
     position: fixed;
     z-index: 10;
     height: 45px;
     /*backdrop-filter: blur(10px);*/
 }
+
+/*@media (max-width: 460px) {*/
+/*    .wrap {*/
+/*        width: unset;*/
+/*    }*/
+/*}*/
 
 .container {
     width: 80%;
@@ -39,7 +45,22 @@
     font-size: 32px;
 }
 
+
+
 .display {
     display: flex;
     align-items: center;
+    gap: 16px;
+}
+
+@media (max-width: 460px) {
+    .container {
+        width: 90%;
+    }
+    .name {
+        font-size: 18px;
+    }
+    .display {
+        gap: 8px
+    }
 }

@@ -32,6 +32,14 @@
     padding: 32px;
 }
 
+.wrapContent {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
 .display {
     display: flex;
     align-items: center;
@@ -107,7 +115,7 @@
     white-space: pre;
 }
 
-.wrapText{
+.wrapText {
     display: flex;
     line-height: 1.8;
     flex-direction: column;
@@ -140,6 +148,20 @@
 
 .personalDataDescription a {
     color: initial;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    gap: 30px;
+}
+
+.button {
+    width: 100%;
+    background-color: #ffd4c1;
+    color: #212529;
 }
 
 /*.wrapGrid {*/
@@ -181,4 +203,15 @@
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5));
     /*background: rgba(0,0,0,.5);*/
     z-index: 2;
+}
+
+@media (max-width: 460px) {
+    .wrapPersonalData {
+        flex-direction: column;
+        align-items: unset;
+    }
+    .wrapContent {
+        flex-direction: column;
+    }
+
 }

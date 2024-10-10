@@ -1,0 +1,12 @@
+.body {
+    /*//color: red;*/
+    background-color: white;
+    /*height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    //gap: 40px;
+}
+
+
+
+
