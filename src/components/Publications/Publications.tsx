@@ -1,8 +1,8 @@
 import { Button, Tooltip } from "antd";
 import { v4 } from "uuid";
-import { IDateParents } from "../ContentForParents/ContentForParents";
 import "./publications.module.css";
 import classes from "./publications.module.css";
+import { IDateParents } from "../ContentForParents/ContentForParentsData";
 
 export const Publications = () => {
   return (

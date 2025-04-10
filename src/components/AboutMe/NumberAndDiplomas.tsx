@@ -1,26 +1,10 @@
 import { Image } from "antd";
 import { useEffect, useState } from "react";
-import { v4 } from "uuid";
-import diplomaEight from "../Assets/Diplomas/diplomaEight.jpg";
-import diplomaEleven from "../Assets/Diplomas/diplomaEleven.jpg";
-import diplomaFifteen from "../Assets/Diplomas/diplomaFifteen.jpg";
-import diplomaFour from "../Assets/Diplomas/diplomaFour.jpg";
-import diplomaFourteen from "../Assets/Diplomas/diplomaFourteen.jpg";
-import diplomaNine from "../Assets/Diplomas/diplomaNine.jpg";
-import diplomaOne from "../Assets/Diplomas/diplomaOne.jpg";
-import diplomaSeven from "../Assets/Diplomas/diplomaSeven.jpg";
-import diplomaSix from "../Assets/Diplomas/diplomaSix.jpg";
-import diplomaTen from "../Assets/Diplomas/diplomaTen.jpg";
-import diplomaThirteen from "../Assets/Diplomas/diplomaThirteen.jpg";
-import diplomaThree from "../Assets/Diplomas/diplomaThree.jpg";
-import diplomaTwelve from "../Assets/Diplomas/diplomaTwelve.jpg";
-import diplomaTwo from "../Assets/Diplomas/diplomaTwo.jpg";
-import certificateOne from "../Assets/RefresherCourses/certificateOne.jpg";
-import certificateThree from "../Assets/RefresherCourses/certificateThree.jpg";
-import certificateTwo from "../Assets/RefresherCourses/certificateTwo.jpg";
-import { StyledButton } from "../StyledComponents/StyledButton";
 import "./aboutMe.module.css";
 import classes from "./aboutMe.module.css";
+import { imagesDiplomasData } from "./diplomasData";
+import { imagesQualificationData } from "./certificatesData";
+import { StyledButton } from "../StyledComponents/StyledButton";
 
 export const NumberAndDiplomas = () => {
   const [currentNumber, setCurrentNumber] = useState<number>(1);
@@ -37,16 +21,26 @@ export const NumberAndDiplomas = () => {
         } else {
           clearInterval(interval);
         }
-      }, 200); // Измените значение 100 на нужное вам значение задержки (в миллисекундах)
+      }, 200);
 
       return () => clearInterval(interval);
     }
-  }, [currentNumber, 40, showElement]);
+  }, [currentNumber, showElement]);
 
   useEffect(() => {
     const handleScroll = () => {
-      // const element = document.getElementById('target-element');
-      setShowElement(true);
+      const element = document.querySelector(`.${classes.wrapNumber}`);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+        setShowElement(isVisible);
+
+        // Сбрасываем currentNumber если элемент стал невидимым
+        if (!isVisible) {
+          setCurrentNumber(0);
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -123,30 +117,3 @@ export const NumberAndDiplomas = () => {
     </div>
   );
 };
-
-interface IImagesData {
-  id: string;
-  image: string;
-}
-
-const imagesDiplomasData: IImagesData[] = [
-  { id: v4(), image: diplomaOne },
-  { id: v4(), image: diplomaTwo },
-  { id: v4(), image: diplomaThree },
-  { id: v4(), image: diplomaFour },
-  { id: v4(), image: diplomaSix },
-  { id: v4(), image: diplomaSeven },
-  { id: v4(), image: diplomaEight },
-  { id: v4(), image: diplomaNine },
-  { id: v4(), image: diplomaTen },
-  { id: v4(), image: diplomaEleven },
-  { id: v4(), image: diplomaTwelve },
-  { id: v4(), image: diplomaThirteen },
-  { id: v4(), image: diplomaFourteen },
-  { id: v4(), image: diplomaFifteen },
-];
-const imagesQualificationData: IImagesData[] = [
-  { id: v4(), image: certificateOne },
-  { id: v4(), image: certificateTwo },
-  { id: v4(), image: certificateThree },
-];

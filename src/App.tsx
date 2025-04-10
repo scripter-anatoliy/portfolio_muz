@@ -27,11 +27,10 @@ export const App = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Ваш код для загрузки данных или выполнения операций
     // Когда загрузка завершена, установите isLoading в false
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Пример задержки 2 секунды
+    }, 2000);
   }, []);
 
   if (isLoading) {
