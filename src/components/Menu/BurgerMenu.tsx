@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { v4 } from "uuid";
 import classes from "./burgerMenu.module.css";
@@ -30,7 +30,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ setShow, show }) => {
   };
 
   return (
-    <div className={classes.wrap}>
+    <div className={`${classes.wrap} ${show ? classes.visible : ""}`}>
       <Menu
         mode="vertical"
         theme="light"
@@ -40,6 +40,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ setShow, show }) => {
         {menuItem.map((item) => (
           <Menu.Item key={item.id}>
             <Link
+              onClick={() => setShow(false)}
               to={item.link}
               smooth={true}
               duration={2000}

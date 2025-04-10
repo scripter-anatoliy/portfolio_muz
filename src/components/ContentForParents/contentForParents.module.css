@@ -17,10 +17,11 @@
     font-weight: 300;
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding-top: 72px;
     padding-bottom: 32px;
     font-size: calc(1.425rem + 2.1vw) !important;
+    align-items: center;
     /*background-image: url('https://phonoteka.org/uploads/posts/2021-05/1620110622_49-phonoteka_org-p-zolotoi-muzikalnii-fon-59.jpg')*/
 }
 
