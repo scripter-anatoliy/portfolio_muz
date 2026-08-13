@@ -21,11 +21,11 @@
     z-index: -1;
 }
 
-@media (max-width: 460px) {
+/* @media (max-width: 460px) {
     .wrap {
         background: url('../Assets/muzMain.jpg') 0 0/cover no-repeat;
     }
-}
+} */
 
 .container {
     font-weight: 300;

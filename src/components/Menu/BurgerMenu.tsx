@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import { v4 } from "uuid";
 import classes from "./burgerMenu.module.css";

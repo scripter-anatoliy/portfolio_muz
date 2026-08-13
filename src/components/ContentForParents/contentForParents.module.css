@@ -63,12 +63,22 @@
 .listItem {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     text-wrap: nowrap;
+    position: relative;
 }
 
-.list a {
-    color: inherit;
-    text-decoration: unset;
-}
+.listItemLink {
+    display: block;      
+    color: inherit;      
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .listItemLink:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
 
 .picture {
     max-height: 500px;

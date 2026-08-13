@@ -13,7 +13,12 @@ function ContentForParents() {
             <div className={classes.list}>
               {dateParents.map((item) => (
                 <div key={item.id} className={classes.listItem}>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.listItemLink}
+                  >
                     {item.title}
                   </a>
                 </div>
@@ -21,7 +26,7 @@ function ContentForParents() {
             </div>
           </div>
           <div className={classes.picture}>
-            <img src={image} alt="default image" />
+            <img src={image} alt="Занятия с детьми" />
           </div>
         </div>
       </div>

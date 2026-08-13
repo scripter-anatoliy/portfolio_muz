@@ -1,4 +1,3 @@
-import { Spin } from "antd";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
@@ -14,6 +13,7 @@ import { NewsLine } from "./components/NewsLine/NewsLine";
 import { Publications } from "./components/Publications/Publications";
 import { ScrollToTopButton } from "./components/StyledComponents/ScrollToTopButton";
 import { StyledContainer } from "./components/StyledComponents/StyledContainer";
+import { Spinner } from "./components/StyledComponents/Spinner";
 
 // interface IApp {
 //     id: string,
@@ -38,13 +38,14 @@ export const App = () => {
       <div
         style={{
           height: "100vh",
-          display: "flex",
+          //   display: "flex",
           alignItems: "center",
           alignContent: "center",
           justifyContent: "center",
         }}
       >
-        <Spin style={{ height: "auto" }} size="large" />
+        {/* <Spin style={{ height: "auto" }} size="large" /> */}
+        <Spinner />
       </div>
     );
   }

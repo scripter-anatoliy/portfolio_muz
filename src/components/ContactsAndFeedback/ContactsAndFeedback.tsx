@@ -1,63 +1,30 @@
 import { Button, Form, Input } from "antd";
 import { useForm } from "antd/es/form/Form";
-import emailjs from "emailjs-com";
-import { useEffect, useRef, useState } from "react";
-import ts from "typescript/lib/tsserverlibrary";
+import { useState } from "react";
 import { v4 } from "uuid";
 import classes from "../ContactsAndFeedback/сontactsAndFeedback.module.css";
 import { Comments } from "./Comments";
 import { Contacts } from "./Contacts";
-import "./сontactsAndFeedback.module.css";
-import LogLevel = ts.server.LogLevel;
+import { send } from "@emailjs/browser";
 
 export const ContactsAndFeedback = () => {
   const [form] = useForm();
-  const [send, setSend] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [isModalOpenComments, setIsModalOpenComments] = useState(false);
-  const [dataComments, setDataComments] = useState<IDataComments[] | []>(data);
+  const dataComments = data;
 
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    // @ts-ignore
-    const input = inputRef?.current.resizableTextArea.textArea.style;
-    console.log(inputRef);
-    console.log(input);
-    input.backgroundColor = "#ffd4c1";
-    input.boxShadow = "unset";
-    // input.style.width = `${input.scrollWidth}px`;
-    // });
-    // return <input ref={inputRef} type="text" value={value} onChange={onChange} />;
-  });
-
-  // @ts-ignore
-  const sendEmail = (e) => {
-    setSend(true);
-    e.preventDefault();
-    console.log(e, "e");
-
-    emailjs
-      .sendForm(
-        "service_9djekxe",
-        "template_r8pgg48",
-        e.target,
-        "JqwxjMrXOxQ6rvnYl"
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          form.resetFields();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    const timeOutID = setTimeout(() => {
-      setSend(false);
-    }, 5000);
-    return () => {
-      clearTimeout(timeOutID);
-    };
+  const onFinish = (values: any) => {
+    setIsSending(true);
+    send("service_9djekxe", "template_r8pgg48", values, "JqwxjMrXOxQ6rvnYl")
+      .then(() => {
+        form.resetFields();
+      })
+      .catch((error: any) => {
+        console.log(error.text);
+      })
+      .finally(() => {
+        setTimeout(() => setIsSending(false), 5000);
+      });
   };
 
   const layout = {
@@ -94,8 +61,8 @@ export const ContactsAndFeedback = () => {
                 {...layout}
                 form={form}
                 name="nest-messages"
-                onSubmitCapture={sendEmail}
-                style={{ width: "100%", opacity: send ? 0.3 : 1 }}
+                onFinish={onFinish}
+                style={{ width: "100%", opacity: isSending ? 0.3 : 1 }}
                 validateMessages={validateMessages}
               >
                 <Form.Item
@@ -134,7 +101,6 @@ export const ContactsAndFeedback = () => {
                   ]}
                 >
                   <Input.TextArea
-                    ref={inputRef}
                     rows={4}
                     name="message"
                     showCount
@@ -147,7 +113,7 @@ export const ContactsAndFeedback = () => {
                   wrapperCol={{ ...layout.wrapperCol, offset: 8 }}
                 >
                   <Button
-                    disabled={send}
+                    disabled={isSending}
                     style={{ marginInlineStart: "unset" }}
                     type="primary"
                     htmlType="submit"
@@ -156,7 +122,7 @@ export const ContactsAndFeedback = () => {
                   </Button>
                 </Form.Item>
               </Form>
-              {send && (
+              {isSending && (
                 <div className={classes.comment}>Спасибо за комментарий!</div>
               )}
             </div>
@@ -165,7 +131,7 @@ export const ContactsAndFeedback = () => {
         <div style={{ textAlign: "center", marginBottom: 24 }}>
           <Button
             onClick={() => setIsModalOpenComments(true)}
-            disabled={send}
+            disabled={isSending}
             style={{ marginInlineStart: "unset", width: 200 }}
             type="primary"
             htmlType="submit"
@@ -179,20 +145,6 @@ export const ContactsAndFeedback = () => {
           handleCancel={handleCancel}
           isModalOpen={isModalOpenComments}
         />
-        {/*    <div>*/}
-        {/*        <div>*/}
-        {/*            <div>*/}
-        {/*                <div>имя</div>*/}
-        {/*                <div>Дата</div>*/}
-        {/*                <div>Сообщение довольно большое</div>*/}
-        {/*            </div>*/}
-        {/*            <div>*/}
-        {/*                <div style={{display: 'flex', alignItems: 'end'}}>Татьяна</div>*/}
-        {/*                <div style={{display: 'flex', alignItems: 'end'}}>1.06.2023г.</div>*/}
-        {/*                <div style={{display: 'flex', alignItems: 'end'}}>Сообщение довольно большое</div>*/}
-        {/*            </div>*/}
-        {/*        </div>*/}
-        {/*    </div>*/}
       </div>
     </div>
   );

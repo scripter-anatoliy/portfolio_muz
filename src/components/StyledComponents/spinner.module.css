@@ -1,0 +1,123 @@
+.musicLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f5f5f7;
+    padding: 0 20px;
+  }
+  
+  .staff {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    margin: 30px auto;
+  }
+  
+  @media (min-width: 768px) {
+    .staff {
+      max-width: 500px;
+      height: 150px;
+    }
+  }
+  
+  .linesContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #333;
+  }
+  
+  .line:nth-child(1) { top: 0%; }
+  .line:nth-child(2) { top: 25%; }
+  .line:nth-child(3) { top: 50%; }
+  .line:nth-child(4) { top: 75%; }
+  .line:nth-child(5) { top: 100%; }
+  
+  .clef {
+    position: absolute;
+    font-size: 60px;
+    left: 10px;
+    top: -5px;
+    z-index: 2;
+  }
+  
+  @media (min-width: 768px) {
+    .clef {
+      font-size: 80px;
+      left: 15px;
+      top: -10px;
+    }
+  }
+  
+  .notesContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .note {
+    position: absolute;
+    color: #e74c3c;
+    opacity: 0;
+    animation: 
+      appear 0.5s forwards,
+      pulse 1s infinite;
+    font-size: 28px;
+  }
+  
+  @media (min-width: 768px) {
+    .note {
+      font-size: 36px;
+    }
+  }
+  
+  /* Расположение нот (до-ре-ми-фа-соль) */
+  .note1 { left: 20%; top: 30px; animation-delay: 0.3s; } /* До */
+  .note2 { left: 35%; top: 0%; animation-delay: 0.6s; }   /* Ре */
+  .note3 { left: 50%; top: 12.5%; animation-delay: 0.9s; } /* Ми */
+  .note4 { left: 65%; top: 25%; animation-delay: 1.2s; }   /* Фа */
+  .note5 { left: 80%; top: 37.5%; animation-delay: 1.5s; } /* Соль */
+  
+  @media (min-width: 768px) {
+    .note1 { left: 150px; top: 30px; }
+    .note2 { left: 230px; top: 0%; }
+    .note3 { left: 310px; top: 12.5%; }
+    .note4 { left: 390px; top: 25%; }
+    .note5 { left: 470px; top: 37.5%; }
+  }
+  
+  .loadingText {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .loadingText {
+      font-size: 18px;
+      margin-top: 35px;
+    }
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px) rotate(-5deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+    }
+  }
+  
+  @keyframes pulse {
+    50% { transform: scale(1.1); }
+  }

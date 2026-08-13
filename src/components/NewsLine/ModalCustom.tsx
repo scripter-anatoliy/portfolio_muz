@@ -52,7 +52,7 @@ export const ModalCustom: React.FC<IModalCustom> = ({
             <div className={classes.wrapContainerImg}>
               <div key={image.id} className={classes.wrapImg}>
                 <img
-                  alt="default picture"
+                  alt={modal?.title || "Фото из новости"}
                   className={classes.img}
                   src={image.imageUrl}
                 />
