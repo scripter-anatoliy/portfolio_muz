@@ -98,7 +98,7 @@ export const NumberAndDiplomas = () => {
             preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
           >
             {imagesDiplomasData.map((image) => (
-              <Image id={image.id} src={image.image} />
+              <Image key={image.id} id={image.id} src={image.image} alt="Диплом" />
             ))}
           </Image.PreviewGroup>
         </div>
@@ -109,7 +109,12 @@ export const NumberAndDiplomas = () => {
             preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
           >
             {imagesQualificationData.map((image) => (
-              <Image id={image.id} src={image.image} />
+              <Image
+                key={image.id}
+                id={image.id}
+                src={image.image}
+                alt="Сертификат"
+              />
             ))}
           </Image.PreviewGroup>
         </div>

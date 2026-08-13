@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./youTubePlayer.module.css";
 import classes from "./youTubePlayer.module.css";
-import placeholderImage from "../Assets/youTybeStop.jpg"; // Импортируем картинку
+import { assetSrc } from "@/lib/assetSrc";
+import placeholderImage from "../Assets/youTybeStop.jpg";
 
 interface IYouTubePlayer {
   urlVideo: string;
@@ -22,7 +23,7 @@ export const YouTubePlayer = ({ urlVideo }: IYouTubePlayer) => {
       >
         {hasError ? (
           <img
-            src={placeholderImage}
+            src={assetSrc(placeholderImage)}
             alt="YouTube video placeholder"
             className={classes.placeholderImage}
           />

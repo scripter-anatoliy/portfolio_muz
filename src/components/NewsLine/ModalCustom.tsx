@@ -48,7 +48,7 @@ export const ModalCustom: React.FC<IModalCustom> = ({
         className="mySwiper"
       >
         {modal?.images.map((image: IImages) => (
-          <SwiperSlide>
+          <SwiperSlide key={image.id}>
             <div className={classes.wrapContainerImg}>
               <div key={image.id} className={classes.wrapImg}>
                 <img

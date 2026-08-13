@@ -34,58 +34,59 @@ import imageThreeNewSix from '../Assets/NewsLinaImages/newSix/imageThreeNewSix.j
 import imageFourNewSix from '../Assets/NewsLinaImages/newSix/imageFourNewSix.jpg';
 import imageFiveNewSix from '../Assets/NewsLinaImages/newSix/imageFiveNewSix.jpg';
 import imageSixNewSix from '../Assets/NewsLinaImages/newSix/imageSixNewSix.jpg';
+import { assetSrc } from "@/lib/assetSrc";
 
 export const imagesNewOne = {
-    screenSaver: screenSaver,
-    imageOne: imageOne,
-    imageTwo: imageTwo,
-    imageThree: imageThree,
-    imageFour: imageFour,
-    imageFive: imageFive,
-    imageSix: imageSix,
+    screenSaver: assetSrc(screenSaver),
+    imageOne: assetSrc(imageOne),
+    imageTwo: assetSrc(imageTwo),
+    imageThree: assetSrc(imageThree),
+    imageFour: assetSrc(imageFour),
+    imageFive: assetSrc(imageFive),
+    imageSix: assetSrc(imageSix),
 }
 
 export const imagesNewTwo = {
-    screenSaver: screensSaverNewTwo,
-    imageOne: imageOneNewTwo,
-    imageTwo: imageTwoNewTwo,
-    imageThree: imageThreeNewTwo,
-    imageFour: imageFourNewTwo,
-    imageFive: imageFiveNewTwo,
-    imageSix: imageSixNewTwo,
+    screenSaver: assetSrc(screensSaverNewTwo),
+    imageOne: assetSrc(imageOneNewTwo),
+    imageTwo: assetSrc(imageTwoNewTwo),
+    imageThree: assetSrc(imageThreeNewTwo),
+    imageFour: assetSrc(imageFourNewTwo),
+    imageFive: assetSrc(imageFiveNewTwo),
+    imageSix: assetSrc(imageSixNewTwo),
 }
 
 export const imagesNewThree = {
-    screenSaver: screensSaverNewThree,
-    imageOne: imageOneNewThree,
-    imageTwo: imageTwoNewThree,
-    imageThree: imageThreeNewThree,
-    imageFour: imageFourNewThree,
+    screenSaver: assetSrc(screensSaverNewThree),
+    imageOne: assetSrc(imageOneNewThree),
+    imageTwo: assetSrc(imageTwoNewThree),
+    imageThree: assetSrc(imageThreeNewThree),
+    imageFour: assetSrc(imageFourNewThree),
 }
 
 export const imagesNewFour = {
-    screenSaver: screensSaverNewFour,
-    imageOne: imageOneNewFour,
-    imageTwo: imageTwoNewFour,
-    imageThree: imageThreeNewFour,
-    imageFour: imageFourNewFour,
+    screenSaver: assetSrc(screensSaverNewFour),
+    imageOne: assetSrc(imageOneNewFour),
+    imageTwo: assetSrc(imageTwoNewFour),
+    imageThree: assetSrc(imageThreeNewFour),
+    imageFour: assetSrc(imageFourNewFour),
 }
 
 export const imagesNewFive = {
-    screenSaver: screensSaverNewFive,
-    imageOne: imageOneNewFive,
-    imageTwo: imageTwoNewFive,
-    imageThree: imageThreeNewFive,
-    imageFour: imageFourNewFive,
+    screenSaver: assetSrc(screensSaverNewFive),
+    imageOne: assetSrc(imageOneNewFive),
+    imageTwo: assetSrc(imageTwoNewFive),
+    imageThree: assetSrc(imageThreeNewFive),
+    imageFour: assetSrc(imageFourNewFive),
 }
 
 
 export const imagesNewSix = {
-    screenSaver: screensSaverNewSix,
-    imageOne: imageOneNewSix,
-    imageTwo: imageTwoNewSix,
-    imageThree: imageThreeNewSix,
-    imageFour: imageFourNewSix,
-    imageFive: imageFiveNewSix,
-    imageSix: imageSixNewSix,
+    screenSaver: assetSrc(screensSaverNewSix),
+    imageOne: assetSrc(imageOneNewSix),
+    imageTwo: assetSrc(imageTwoNewSix),
+    imageThree: assetSrc(imageThreeNewSix),
+    imageFour: assetSrc(imageFourNewSix),
+    imageFive: assetSrc(imageFiveNewSix),
+    imageSix: assetSrc(imageSixNewSix),
 }

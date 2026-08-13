@@ -23,7 +23,7 @@ export const AboutMe = () => {
           </div>
           <div className={classes.wrapText}>
             <span data-aos="fade-in" data-aos-duration="2000">
-              Работаю музыкальным руководителем в МБОУ "Школа №176" г.о. Самара
+              Работаю музыкальным руководителем в МБОУ «Школа №176» г.о. Самара
               (дошкольные группы). Квалификационная категория: высшая
             </span>
             <span data-aos="fade-in" data-aos-duration="2000">

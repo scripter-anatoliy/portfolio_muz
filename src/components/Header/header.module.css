@@ -39,7 +39,7 @@
 }
 
 .name {
-    font-family: 'Lora';
+    font-family: var(--font-lora), "Lora", serif;
     font-style: italic;
     font-weight: bold;
     font-size: 32px;

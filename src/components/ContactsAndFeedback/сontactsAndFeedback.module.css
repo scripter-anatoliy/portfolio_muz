@@ -66,11 +66,11 @@
     background-color: #ffd4c1;
 }
 
-textarea:before {
+.wrap textarea:before {
     background-color: #ffd4c1;
 }
 
-textarea {
+.wrap textarea {
     font-size: 1rem;
 }
 
@@ -182,7 +182,7 @@ textarea {
     max-height: 200px;
     border-radius: 10px;
     padding: 12px;
-    font-family: 'Lora';
+    font-family: var(--font-lora), "Lora", serif;
 }
 
 .commentUser {

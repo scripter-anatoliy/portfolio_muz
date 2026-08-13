@@ -1,3 +1,4 @@
+import { assetSrc } from "@/lib/assetSrc";
 import image from "../Assets/imageParents.jpg";
 import classes from "./contentForParents.module.css";
 import { dateParents } from "./ContentForParentsData";
@@ -26,7 +27,7 @@ function ContentForParents() {
             </div>
           </div>
           <div className={classes.picture}>
-            <img src={image} alt="Занятия с детьми" />
+            <img src={assetSrc(image)} alt="Занятия с детьми" />
           </div>
         </div>
       </div>

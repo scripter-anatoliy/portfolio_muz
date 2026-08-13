@@ -1,5 +1,6 @@
 import { Modal } from "antd";
 import React from "react";
+import { assetSrc } from "@/lib/assetSrc";
 import icon1 from "../Assets/Icons/icons1.png";
 import avatar from "../Assets/avatar.png";
 import classes from "../ContactsAndFeedback/сontactsAndFeedback.module.css";
@@ -41,7 +42,7 @@ export const Comments: React.FC<IComments> = ({
                 <div className={classes.userName}>{item.name}</div>
                 <img
                   style={{ width: "fit-content" }}
-                  src={icon1}
+                  src={assetSrc(icon1)}
                   alt="avatar"
                 />
               </div>
@@ -58,7 +59,7 @@ export const Comments: React.FC<IComments> = ({
                 <div className={classes.userName}>Татьяна С.</div>
                 <img
                   style={{ width: 64, borderRadius: 5 }}
-                  src={avatar}
+                  src={assetSrc(avatar)}
                   alt="avatar"
                 />
               </div>
